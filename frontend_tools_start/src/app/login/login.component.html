@@ -1,0 +1,29 @@
+<h1># Login in progress</h1>
+
+<div class="container">
+    <form class="row">
+        <div class="my-4 col-12 col-md-3">
+            <label for="username">Benutzer*innenname</label>
+        </div>
+        <div class="my-3 col-12 col-md-9">
+            <input class="form-control" type="text" placeholder="Benutzer*innenname" id="username" required [formControl]="username"
+            [class]="username.touched ? username.valid ? 'is-valid' : 'is-invalid' : ''" />
+            <div class="invalid-feedback">
+                Bitte einen Namen eintragen.
+            </div>
+        </div>
+        <div class="my-4 col-12 col-md-3">
+            <label for="password">Passwort</label>
+        </div>
+        <div class="my-3 col-12 col-md-9"> 
+            <input class="form-control" type="password" placeholder="Passwort" id="password" required [formControl]="password"
+            [class]="password.touched ? password.valid ? 'is-valid' : 'is-invalid' : ''" />
+            <div class="invalid-feedback">
+                Bitte ein Passwort mit mindestens 12 Zeichen eintragen.
+            </div>
+        </div> 
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn me-md-4" type="button" style="margin-bottom: 0.5em; background-color: purple; color: lightcoral;" (click)="login()">Login</button>
+        </div>
+    </form>
+</div>

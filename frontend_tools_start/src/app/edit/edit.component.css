@@ -1,0 +1,20 @@
+@import url('../../../node_modules/bootstrap-icons/font/bootstrap-icons.css');
+
+h1 {
+    padding-bottom: 2%;
+}
+
+input {
+    margin: 2%;
+}
+
+.bund {
+    text-align: right;
+    padding-right: 4%;
+}
+
+#new {
+    margin-bottom: 1.5%;
+    background-color: lightcoral;
+    color: purple;
+}

@@ -1,0 +1,47 @@
+<h1>Übersicht: Welche * Tools * Kisten sind ausleihbar?</h1>
+
+<input type="text" placeholder="Suche" [formControl]="search" (input)="filterTools()" />
+<div *ngIf="searchString===''; else elseBlock">
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-info">
+            <tr>
+                <th class="bund">#</th>
+                <th>Kategorie</th>
+                <th>Artikel</th>
+                <th>Details</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tools;">
+                <td class="bund">{{ item.id }}</td>
+                <td>{{ item.kategorie }}</td>
+                <td>{{ item.artikel }}</td>
+                <td>{{ item.details }}</td>
+                <td>{{ item.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #elseBlock>
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-info">
+            <tr>
+                <th class="bund">#</th>
+                <th>Kategorie</th>
+                <th>Artikel</th>
+                <th>Details</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of filterArray;">
+                <td class="bund">{{ item.id }}</td>
+                <td>{{ item.kategorie }}</td>
+                <td>{{ item.artikel }}</td>
+                <td>{{ item.details }}</td>
+                <td>{{ item.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
