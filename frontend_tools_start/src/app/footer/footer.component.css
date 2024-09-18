@@ -1,15 +1,33 @@
-.footer {
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 3em;
-    background-color: lightcoral;
-    color: purple;
+    height: 2em;
+    background-color: rgb(253, 172, 172);
+    color: rgb(77, 1, 77);
     text-align: center;
     font-size: smaller;
 }
 
 p {
-    padding: 0.5%;
+    padding: 0,5%;
 }
+
+@media screen and (max-width: 1300px) {
+    footer {
+        height: 3em;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    footer {
+        height: 4.5em;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    footer {
+        height: 6em;
+    }
+  }

@@ -1,6 +1,10 @@
-.header {
-    background-color: lightcoral;
-    color: purple;
-    padding: 0.5%;
+header {
+    background-color: rgb(253, 172, 172);
+    color: rgb(77, 1, 77);
+    padding-top: 1rem;
     text-align: center;
+}
+
+.untertitel {
+    font-size: larger;
 }
