@@ -1,8 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: rgb(191, 184, 196);
+    background-color: rgb(226, 218, 230);
 }
 
 main {
     padding: 4%;
 }
+
+@media screen and (max-width: 1300px) {
+    main {
+        padding-bottom: 1%;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    main {
+        padding-bottom: 10%;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    main {
+        padding-bottom: 18%;
+    }
+  }

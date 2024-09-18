@@ -15,7 +15,7 @@ export class EditComponent {
   ngOnInit(): void {
     this.readAllTools();
     this.filterArray = this.tools;
-    console.log('in table --> allMembers', this.tools)
+    console.log('in table --> allTools', this.tools)
   }
 
   bs = inject(BackendService);
