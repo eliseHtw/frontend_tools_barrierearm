@@ -21,8 +21,8 @@
                 <td>{{ tool.artikel }}</td>
                 <td>{{ tool.details }}</td>
                 <td>{{ tool.status }}</td>
-                <td><a class="btn btn-sm" style="background-color: purple; color: lightcoral;" [routerLink]="['/update', tool.id]"><i class="bi bi-pencil-square"></i> aktualisieren</a></td>
-                <td><button class="btn btn-sm btn-secondary" (click)="deleteOneTool(tool.id)"><i class="bi bi-trash3-fill"></i> löschen</button></td>
+                <td><a class="btn btn-sm fw-bold" style="background-color: rgb(77, 1, 77); color: rgb(253, 172, 172);" [routerLink]="['/update', tool.id]"><i class="bi bi-pencil-square"></i> aktualisieren</a></td>
+                <td><button class="btn btn-sm fw-bold" style="background-color: rgb(82, 82, 82); color: white;" (click)="deleteOneTool(tool.id)"><i class="bi bi-trash3-fill"></i> löschen</button></td>
             </tr>
         }
     </tbody>
