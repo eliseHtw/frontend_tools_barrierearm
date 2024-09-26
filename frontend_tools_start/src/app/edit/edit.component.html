@@ -1,29 +1,31 @@
-<h1>* Tools * Kisten bearbeiten</h1>
+<div class="edit" id="main-content">
+    <h1>* Tools * Kisten bearbeiten</h1>
 
-<a class="btn btn-lg btn-outline-secondary fw-bold" id="new" [routerLink]="['/create']"><i class="bi bi-patch-plus-fill"></i> neue Kiste erstellen</a>
-<table class="table table-striped table-hover align-middle">
-    <thead class="table-info">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Kategorie</th>
-            <th scope="col">Artikel</th>
-            <th scope="col">Details</th>
-            <th scope="col">Status</th>
-            <th scope="col">Änderungen</th>
-            <th scope="col">Löschen</th>
-        </tr>
-    </thead>
-    <tbody>
-        @for (tool of tools; track tool.id) {
+    <button class="btn btn-lg fw-bold fs-4" id="new" [routerLink]="['/create']"><i class="bi bi-patch-plus-fill"></i> neue Kiste erstellen</button> 
+    <table class="table table-striped table-hover align-middle" aria-label="Tabelle der Tools zum editieren">
+        <thead class="table-info">
             <tr>
-                <th scope="row">{{ tool.id }}</th>
-                <td>{{ tool.kategorie }}</td>
-                <td>{{ tool.artikel }}</td>
-                <td>{{ tool.details }}</td>
-                <td>{{ tool.status }}</td>
-                <td><a class="btn btn-sm fw-bold" style="background-color: rgb(77, 1, 77); color: rgb(253, 172, 172);" [routerLink]="['/update', tool.id]"><i class="bi bi-pencil-square"></i> aktualisieren</a></td>
-                <td><button class="btn btn-sm fw-bold" style="background-color: rgb(82, 82, 82); color: white;" (click)="deleteOneTool(tool.id)"><i class="bi bi-trash3-fill"></i> löschen</button></td>
+                <th scope="col">#</th>
+                <th scope="col">Kategorie</th>
+                <th scope="col">Artikel</th>
+                <th scope="col">Details</th>
+                <th scope="col">Status</th>
+                <th scope="col">Änderungen</th>
+                <th scope="col">Löschen</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @for (tool of tools; track tool.id) {
+                <tr>
+                    <th scope="row">{{ tool.id }}</th>
+                    <td>{{ tool.kategorie }}</td>
+                    <td>{{ tool.artikel }}</td>
+                    <td>{{ tool.details }}</td>
+                    <td>{{ tool.status }}</td>
+                    <td><button class="btn btn-sm fw-bold fs-6" style="background-color: rgb(77, 1, 77); color: rgb(253, 172, 172);" [routerLink]="['/update', tool.id]"><i class="bi bi-pencil-square"></i> aktualisieren</button></td>
+                    <td><button class="btn btn-sm fw-bold fs-6" style="background-color: rgb(82, 82, 82); color: white;" (click)="deleteOneTool(tool.id)"><i class="bi bi-trash3-fill"></i> löschen</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,9 +1,21 @@
 input {
-    margin-top: 1.5%;
     margin-bottom: 1.5%;
 }
 
 .bund {
     text-align: right;
     padding-right: 4%;
+}
+
+#suche {
+    margin-left: 1rem;
+}
+
+:focus {
+    outline: #0f64ce solid 3px;
+    outline-offset: 2px;
+}
+
+@media screen and (max-width: 550px) {
+    
 }

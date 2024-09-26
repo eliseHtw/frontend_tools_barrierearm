@@ -8,11 +8,11 @@ import { UpdateComponent } from './update/update.component';
 import { CreateComponent } from './create/create.component';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: 'kiste', component: KisteComponent },
-    { path: 'edit', component: EditComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'update/:id', component: UpdateComponent },
-    { path: 'create', component: CreateComponent}
+    { path: 'home', component: HomeComponent, data:{title: 'Startseite von * Tools* - die Ausleihkiste'} },
+    { path: 'kiste', component: KisteComponent, data: {title: 'Ausleihkiste - Übersicht über verfügbare * Tools * - die Ausleihkiste'} },
+    { path: 'edit', component: EditComponent, data: {title: 'Kiste bearbeiten - editieren von * Tools * - die Ausleihkiste'} },
+    { path: 'login', component: LoginComponent, data: {title: 'Login - Einloggen als Benutzer*in * Tools * - die Ausleihkiste'} },
+    { path: 'register', component: RegisterComponent, data: {title: 'Registrieren als Benutzer*in für * Tools * - die Ausleihkiste'} },
+    { path: 'update/:id', component: UpdateComponent, data: {title: 'Ändern von Einträgen in * Tools * - die Ausleihkiste'} },
+    { path: 'create', component: CreateComponent, data: {title: 'neue Kiste erstellen für * Tools * - die Ausleihkiste'} }
 ];

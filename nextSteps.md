@@ -13,6 +13,7 @@
 - dann für alle sichtbar: home, register und login
 - für user mit Leserechten zusätzlich sichtbar: kiste
 - für user mit erweiterten Rechten zusätzlich sichtbar: edit, create und update
+- insbesondere edit und kiste besser anpassen, damit die Tabelleninhalte auch auf einem schmalen device, z.B. Smartphone, gut angezeigt werden
 - Kisten nach Spalten sortieren können
 - header und nav fixed, so dass sie immer oben sind, auch beim runter scrollen
 - in create und update Dropdownmenüs zur Auswahl mit schon vorhandenen Kategorien, Artikeln und Details zusätzlich mit der Option auf neue Kategorien, Artikel oder Details hinzufügen. Beim Status nur feste Auswahl an Optionen.
@@ -26,7 +27,7 @@
 - Rolle der user nicht frei bei Registrierung wählbar, erweiterte Rechte nur nach Zustimmung einer Admin
 - tatsächliche Anwendung umsetzen ins reale Leben
 - weiter testen ob gegen Angriffe geschützt
-- Barrierefreiheit, z.B. andere Farbmodi (falls wer die Farben nicht mag oder die stören), Hell-/Dunkelmodus, überprüfen, ob die Seite komplett für Screenreader geeignet ist etc.
+- weiter an der Barrierefreiheit arbeiten und diese auch immer grundsätzlich gewährleisten
 - E-Mail-Funktion, um bei Bedarf mit Benutzer*innen zu kommunizieren
 - weiter warten und updaten
 - Impressum, Datenschutzerklärung

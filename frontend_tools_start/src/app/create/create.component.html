@@ -1,89 +1,92 @@
-<h1>Erstellen einer neuen * Tools * Kiste</h1>
+<div class="create" id="main-content">
 
-<div class="container">
-  
-    <div class="mb-3 form-floating">
-      <input type="text" class="form-control" id="idKategorie" [formControl]="kategorieFC"
-        [class]="kategorieFC.touched ? kategorieFC.valid ? 'is-valid' : 'is-invalid' : ''">
-      <label for="idKategorie">Kategorie</label>
-      <div class="invalid-feedback">
-        Bitte die Kategorie für die Kiste eintragen.
-      </div>
-    </div>
-  
-    <div class="mb-3 form-floating">
-      <input type="text" class="form-control" id="idArtikel" [formControl]="artikelFC"
-        [class]="artikelFC.touched ? artikelFC.valid ? 'is-valid' : 'is-invalid' : ''">
-      <label for="idArtikel">Artikel</label>
-      <div class="invalid-feedback">
-        Bitte grob den Inhalt der Kiste eintragen.
-      </div>
-    </div>
-  
-    <div class="mb-3 form-floating">
-      <input type="text" class="form-control" id="idDetails" [formControl]="detailsFC"
-        [class]="detailsFC.touched ? detailsFC.valid ? 'is-valid' : 'is-invalid' : ''">
-      <label for="idDetails">Details</label>
-      <div class="invalid-feedback">
-        Bitte Details zum Inhalt der Kiste eintragen.
-      </div>
-    </div>
+  <h1>Erstellen einer neuen * Tools * Kiste</h1>
 
-    <div class="mb-5 form-floating">
-        <input type="text" class="form-control" id="idStatus" [formControl]="statusFC"
-          [class]="statusFC.touched ? statusFC.valid ? 'is-valid' : 'is-invalid' : ''">
-        <label for="idStatus">Status</label>
+  <div class="container">
+    
+      <div class="mb-3 form-floating">
+        <input type="text" class="form-control" id="idKategorie" [formControl]="kategorieFC"
+          [class]="kategorieFC.touched ? kategorieFC.valid ? 'is-valid' : 'is-invalid' : ''">
+        <label for="idKategorie">Kategorie</label>
         <div class="invalid-feedback">
-          Bitte Status eintragen. Wenn Kiste am richtigen Ort vorhanden und nicht vorbestellt: "verfügbar". Sonst "nicht verfügbar".
+          Bitte die Kategorie für die Kiste eintragen.
         </div>
       </div>
-  
-    <div class="row">
-      <div class="col">
-        <button type="button" class="w-100 btn btn-success" style="background-color: purple; color: lightcoral;" 
-        (click)="create(content)"><i class="bi bi-patch-plus"></i> Kiste hinzufügen</button>
+    
+      <div class="mb-3 form-floating">
+        <input type="text" class="form-control" id="idArtikel" [formControl]="artikelFC"
+          [class]="artikelFC.touched ? artikelFC.valid ? 'is-valid' : 'is-invalid' : ''">
+        <label for="idArtikel">Artikel</label>
+        <div class="invalid-feedback">
+          Bitte grob den Inhalt der Kiste eintragen.
+        </div>
       </div>
-      <div class="col">
-        <button type="button" class="w-100 btn" style="background-color: lightcoral; color: purple;" (click)="cancel()"><i class="bi bi-cloud-haze2"></i> Zeilen leeren</button>
+    
+      <div class="mb-3 form-floating">
+        <input type="text" class="form-control" id="idDetails" [formControl]="detailsFC"
+          [class]="detailsFC.touched ? detailsFC.valid ? 'is-valid' : 'is-invalid' : ''">
+        <label for="idDetails">Details</label>
+        <div class="invalid-feedback">
+          Bitte Details zum Inhalt der Kiste eintragen.
+        </div>
       </div>
-      <div class="col">
-        <a class="w-100 btn btn-secondary" [routerLink]="['/edit']"><i class="bi bi-skip-backward"></i> Abbrechen</a>
+
+      <div class="mb-5 form-floating">
+          <input type="text" class="form-control" id="idStatus" [formControl]="statusFC"
+            [class]="statusFC.touched ? statusFC.valid ? 'is-valid' : 'is-invalid' : ''">
+          <label for="idStatus">Status</label>
+          <div class="invalid-feedback">
+            Bitte Status eintragen. Wenn Kiste am richtigen Ort vorhanden und nicht vorbestellt: "verfügbar". Sonst "nicht verfügbar".
+          </div>
+        </div>
+    
+      <div class="row">
+        <div class="col">
+          <button type="button" class="w-100 btn fs-6 fw-bold" style="background-color: rgb(77, 1, 77); color: rgb(253, 172, 172);" 
+          (click)="create(content)"><i class="bi bi-patch-plus"></i> Kiste hinzufügen</button>
+        </div>
+        <div class="col">
+          <button type="button" class="w-100 btn fs-6 fw-bold" style="background-color: rgb(253, 172, 172); color: rgb(77, 1, 77);" (click)="cancel()"><i class="bi bi-cloud-haze2"></i> Zeilen leeren</button>
+        </div>
+        <div class="col">
+          <button class="w-100 btn btn-secondary fs-6 fw-bold" [routerLink]="['/edit']"><i class="bi bi-skip-backward"></i> Abbrechen</button> 
+        </div>
       </div>
     </div>
-  </div>
-  
-  <ng-template #content let-modal>
-    <div class="modal-header">
-      <h6 class="modal-title" id="modal-basic-title">Neue Kiste erstellt!</h6>
-      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-    </div>
-    <div class="modal-body">
-      <table class="table">
-        <tbody>
-          <tr>
-            <td>kategorie</td>
-            <td>:</td>
-            <td>{{ kategorieFC.value }}</td>
-          </tr>
-          <tr>
-            <td>artikel</td>
-            <td>:</td>
-            <td>{{ artikelFC.value }}</td>
-          </tr>
-          <tr>
-            <td>details</td>
-            <td>:</td>
-            <td>{{ detailsFC.value }}</td>
-          </tr>
-          <tr>
-            <td>status</td>
-            <td>:</td>
-            <td>{{ statusFC.value }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Schließen</button>
-    </div>
-  </ng-template>
+    
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title">Neue Kiste erstellt!</h6>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>kategorie</td>
+              <td>:</td>
+              <td>{{ kategorieFC.value }}</td>
+            </tr>
+            <tr>
+              <td>artikel</td>
+              <td>:</td>
+              <td>{{ artikelFC.value }}</td>
+            </tr>
+            <tr>
+              <td>details</td>
+              <td>:</td>
+              <td>{{ detailsFC.value }}</td>
+            </tr>
+            <tr>
+              <td>status</td>
+              <td>:</td>
+              <td>{{ statusFC.value }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Schließen</button>
+      </div>
+    </ng-template>
+</div>

@@ -18,16 +18,16 @@ p {
     footer {
         height: 3em;
     }
-  }
+}
 
-  @media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
     footer {
         height: 4.5em;
     }
-  }
+}
 
-  @media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) {
     footer {
         height: 6em;
     }
-  }
+}

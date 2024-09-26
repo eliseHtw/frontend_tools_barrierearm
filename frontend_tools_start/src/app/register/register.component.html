@@ -1,89 +1,92 @@
-<h1>Neue Registrierung</h1>
+<div class="register" id="main-content">
 
-<div class="container">
-    <form class="row">
-        <div class="my-4 col-12 col-md-3">
-            <label for="username">Benutzer*innenname</label>
-        </div>
-        <div class="my-3 col-12 col-md-9">
-            <input class="form-control" type="text" placeholder="Benutzer*innenname" id="username" required [formControl]="usernameFC"
-            [class]="usernameFC.touched ? usernameFC.valid ? 'is-valid' : 'is-invalid' : ''" />
-            <div class="invalid-feedback">
-                Bitte einen Namen eintragen.
-            </div>
-        </div>
-        <div class="my-4 col-12 col-md-3">
-            <label for="password">Passwort</label>
-        </div>
-        <div class="my-3 col-12 col-md-9"> 
-            <input class="form-control" type="password" placeholder="Passwort" id="password" required [formControl]="passwordFC"
-            [class]="passwordFC.touched ? passwordFC.valid ? 'is-valid' : 'is-invalid' : ''" />
-            <div class="invalid-feedback">
-                Bitte ein Passwort mit mindestens 12 Zeichen eintragen.
-            </div>
-        </div> 
-        <div class="my-4 col-12 col-md-3">
-            <label for="email">E-Mail</label>
-        </div>
-        <div class="my-3 col-12 col-md-9">
-            <input class="form-control" type="email" placeholder="E-Mail" id="email" required [formControl]="emailFC"
-            [class]="emailFC.touched ? emailFC.valid ? 'is-valid' : 'is-invalid' : ''" />
-            <div class="invalid-feedback">
-                Bitte eine E-Mail-Adresse eintragen.
-            </div>
-        </div> 
-        <div class="my-4 col-12 col-md-3">
-            <label for="role">Rolle auswählen</label>
-        </div>
-        <div class="my-3 col-12 col-md-9">
-            <select class="form-select" aria-label="Default select example" type="text" placeholder="Rolle" id="role" required [formControl]="roleFC"
-            [class]="roleFC.touched ? roleFC.valid ? 'is-valid' : 'is-invalid' : ''">
-            <option value="1">Benutzer*in (lesende Rechte)</option>
-            <option value="2">Benutzer*in (erweiterte Rechte)</option>
-          </select>
-          <div class="invalid-feedback">
-            Bitte eine Auswahl treffen.
+  <h1>Neue Registrierung</h1>
+
+  <div class="container">
+      <form class="row">
+          <div class="my-4 col-12 col-md-3">
+              <label for="username">Benutzer*innenname</label>
           </div>
-        </div>
-            
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn me-md-4 fw-bold" type="button" style="margin-bottom: 0.5em; background-color: rgb(77, 1, 77); color: rgb(253, 172, 172);" (click)="register(content)">Speichern</button>
-        </div>
-    </form>
-</div>
+          <div class="my-3 col-12 col-md-9">
+              <input class="form-control" type="text" placeholder="Benutzer*innenname" id="username" name="username" required [formControl]="usernameFC"
+              [class]="usernameFC.touched ? usernameFC.valid ? 'is-valid' : 'is-invalid' : ''" />
+              <div class="invalid-feedback">
+                  Bitte einen Namen eintragen.
+              </div>
+          </div>
+          <div class="my-4 col-12 col-md-3">
+              <label for="password">Passwort</label>
+          </div>
+          <div class="my-3 col-12 col-md-9"> 
+              <input class="form-control" type="password" placeholder="Passwort" id="password" name="password" required [formControl]="passwordFC"
+              [class]="passwordFC.touched ? passwordFC.valid ? 'is-valid' : 'is-invalid' : ''" />
+              <div class="invalid-feedback">
+                  Bitte ein Passwort mit mindestens 12 Zeichen eintragen.
+              </div>
+          </div> 
+          <div class="my-4 col-12 col-md-3">
+              <label for="email">E-Mail</label>
+          </div>
+          <div class="my-3 col-12 col-md-9">
+              <input class="form-control" type="email" placeholder="E-Mail" id="email" name="email" required [formControl]="emailFC"
+              [class]="emailFC.touched ? emailFC.valid ? 'is-valid' : 'is-invalid' : ''" />
+              <div class="invalid-feedback">
+                  Bitte eine E-Mail-Adresse eintragen.
+              </div>
+          </div> 
+          <div class="my-4 col-12 col-md-3">
+              <label for="role">Rolle auswählen</label>
+          </div>
+          <div class="my-3 col-12 col-md-9">
+              <select class="form-select" aria-label="Default select example" type="text" placeholder="Rolle" id="role" name="role" required [formControl]="roleFC"
+              [class]="roleFC.touched ? roleFC.valid ? 'is-valid' : 'is-invalid' : ''">
+              <option value="1">Benutzer*in (lesende Rechte)</option>
+              <option value="2">Benutzer*in (erweiterte Rechte)</option>
+            </select>
+            <div class="invalid-feedback">
+              Bitte eine Auswahl treffen.
+            </div>
+          </div>
+              
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn me-md-4 fw-bold" type="button" style="margin-bottom: 0.5em; background-color: rgb(77, 1, 77); color: rgb(253, 172, 172);" (click)="register(content)">Speichern</button>
+          </div>
+      </form>
+  </div>
 
-<ng-template #content let-modal>
-    <div class="modal-header">
-      <h6 class="modal-title" id="modal-basic-title">Neue Benutzer*in erstellt!</h6>
-      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-    </div>
-    <div class="modal-body">
-      <table class="table">
-        <tbody>
-          <tr>
-            <td>username</td>
-            <td>:</td>
-            <td>{{ usernameFC.value }}</td>
-          </tr>
-          <tr>
-            <td>password</td>
-            <td>:</td>
-            <td>GEHEIM! :)</td>
-          </tr>
-          <tr>
-            <td>email</td>
-            <td>:</td>
-            <td>{{ emailFC.value }}</td>
-          </tr>
-          <tr>
-            <td>role</td>
-            <td>:</td>
-            <td>{{ roleFC.value }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Schließen</button>
-    </div>
-  </ng-template>
+  <ng-template #content let-modal>
+      <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title">Neue Benutzer*in erstellt!</h6>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>username</td>
+              <td>:</td>
+              <td>{{ usernameFC.value }}</td>
+            </tr>
+            <tr>
+              <td>password</td>
+              <td>:</td>
+              <td>GEHEIM! :)</td>
+            </tr>
+            <tr>
+              <td>email</td>
+              <td>:</td>
+              <td>{{ emailFC.value }}</td>
+            </tr>
+            <tr>
+              <td>role</td>
+              <td>:</td>
+              <td>{{ roleFC.value }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Schließen</button>
+      </div>
+    </ng-template>
+</div>
