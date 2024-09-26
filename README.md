@@ -81,7 +81,7 @@ Hier sind nun auch die vorher - nachher Bilder zu sehen.
 - beschreibt kurz, wofür * Tools * da ist
 - (soll zukünftig für alle sichtbar sein)
  
-![Home](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_home.png) 
+![Home](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2-home.png) 
 
 ![Home](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_home.png)
 
@@ -92,29 +92,29 @@ Hier sind nun auch die vorher - nachher Bilder zu sehen.
 - (soll zukünftig für eingeloggte Benutzer*innen mit Leserechten sichtbar sein)
 - ist nach Kategorie, Artikel und Details filterbar  
 
-![Ausleihkiste](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_kiste.png)
+![Ausleihkiste](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2-kiste.png)
 
 ![Ausleihkiste](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_kiste.png)
 
-![Ausleihkiste](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_kiste-filter.png)
+![Ausleihkiste](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2-kiste-filter.png)
 
 ### Kiste bearbeiten
 - zeigt alle vorhandenen Kisten an  
 
-![Kiste bearbeiten](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_edit.png)
+![Kiste bearbeiten](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2-edit.png)
 
 ![Kiste bearbeiten](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_edit.png)
 
 - es ist möglich einzelne Kisten ganz zu löschen über den Button `löschen`
 - es ist möglich neue Kisten hinzuzufügen über den Button `neue Kiste erstellen`  
 
-![neue Kiste erstellen](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_create.png)
+![neue Kiste erstellen](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2-create.png)
 
 ![neue Kiste erstellen](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_create.png)
 
 - es ist möglich einzelne Kisten zu aktualisieren über den Button `aktualisieren`  
 
-![Kiste aktualisieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_update.png)
+![Kiste aktualisieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2-update.png)
 
 ![Kiste aktualisieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_update.png)
 
@@ -123,12 +123,15 @@ Hier sind nun auch die vorher - nachher Bilder zu sehen.
 
 ### Login
 - hier entsteht eine Login-Seite
-![Einloggen](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_login.png)
+
+![Einloggen](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2-login.png)
 
 ### Registrieren
 - hier können sich neue Nutzer*innen registrieren
 - benötigt wird ein Benutzer*innenname, ein Passwort mit mindestens 12 Zeichen, eine E-Mail-Adresse und noch ist die Rolle für Leserechte vs. erweiterte Rechte frei wählbar  
-![Registrieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_register.png)
+
+![Registrieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2-register.png)
+
 ![Registrieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_register.png)
 
 ## Nächste Schritte
