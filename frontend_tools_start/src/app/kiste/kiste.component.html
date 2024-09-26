@@ -1,47 +1,51 @@
-<h1>Übersicht: Welche * Tools * Kisten sind ausleihbar?</h1>
+<div class="kiste" id="main-content">
 
-<input type="text" placeholder="Suche" [formControl]="search" (input)="filterTools()" />
-<div *ngIf="searchString===''; else elseBlock">
-    <table class="table table-striped table-hover align-middle">
-        <thead class="table-info">
-            <tr>
-                <th class="bund">#</th>
-                <th>Kategorie</th>
-                <th>Artikel</th>
-                <th>Details</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of tools;">
-                <td class="bund">{{ item.id }}</td>
-                <td>{{ item.kategorie }}</td>
-                <td>{{ item.artikel }}</td>
-                <td>{{ item.details }}</td>
-                <td>{{ item.status }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <h1>Übersicht: Welche * Tools * Kisten sind ausleihbar?</h1>
+
+    <label for="suche">Filtern nach:</label>
+    <input type="text" id="suche" name="suche" aria-label="Suche" placeholder="Suche" [formControl]="search" (input)="filterTools()" />
+    <div *ngIf="searchString===''; else elseBlock">
+        <table class="table table-striped table-hover align-middle" aria-label="Tabelle der ausleihbaren Tools">
+            <thead class="table-info">
+                <tr>
+                    <th class="bund" scope="col">#</th>
+                    <th scope="col">Kategorie</th>
+                    <th scope="col">Artikel</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of tools;">
+                    <td class="bund">{{ item.id }}</td>
+                    <td>{{ item.kategorie }}</td>
+                    <td>{{ item.artikel }}</td>
+                    <td>{{ item.details }}</td>
+                    <td>{{ item.status }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template #elseBlock>
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-info">
+                <tr>
+                    <th class="bund">#</th>
+                    <th>Kategorie</th>
+                    <th>Artikel</th>
+                    <th>Details</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of filterArray;">
+                    <td class="bund">{{ item.id }}</td>
+                    <td>{{ item.kategorie }}</td>
+                    <td>{{ item.artikel }}</td>
+                    <td>{{ item.details }}</td>
+                    <td>{{ item.status }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-template>
 </div>
-<ng-template #elseBlock>
-    <table class="table table-striped table-hover align-middle">
-        <thead class="table-info">
-            <tr>
-                <th class="bund">#</th>
-                <th>Kategorie</th>
-                <th>Artikel</th>
-                <th>Details</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of filterArray;">
-                <td class="bund">{{ item.id }}</td>
-                <td>{{ item.kategorie }}</td>
-                <td>{{ item.artikel }}</td>
-                <td>{{ item.details }}</td>
-                <td>{{ item.status }}</td>
-            </tr>
-        </tbody>
-    </table>
-</ng-template>

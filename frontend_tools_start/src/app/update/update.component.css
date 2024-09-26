@@ -1,5 +1,6 @@
 @import url('../../../node_modules/bootstrap-icons/font/bootstrap-icons.css');
 
-h1 {
-    padding-bottom: 2%;
+:focus {
+    outline: #0f64ce solid 3px;
+    outline-offset: 2px;
 }
