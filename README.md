@@ -1,6 +1,7 @@
 # frontend_tools_barrierearm - Das neue Frontend für frontend_tools - Das Frontend für: * Tools * - Die Ausleihkiste
 
-(Technische Details siehe unten)
+- (Technische Details siehe unten. Altes Projekt siehe: [frontend_tools](https://github.com/eliseHtw/frontend_tools.git).)
+- Vergleich mit Bildern der alten und neuen Webseite ab [#Verwendung](#Verwendung)
 
 Das Frontend wurde an vielen Stellen angepasst, damit es barrierefrei zu bedienen ist. Dafür wurden verschiedene Erfolgskriterein aus den Web Content Accessibility Guidelines (WCAG) 2.2 umgesetzt. 
 
@@ -74,10 +75,14 @@ Die Seite wurde an manchen Punkten responsiver gemacht, also je nach Größe des
 Diese Anwendung soll die Möglichkeit bieten, für kreative Aktionen Hilfsmittel auszuleihen
 
 ## Verwendung
+Hier sind nun auch die vorher - nachher Bilder zu sehen.
+
 ### Home 
 - beschreibt kurz, wofür * Tools * da ist
-- (soll zukünftig für alle sichtbar sein)  
-![Home](https://github.com/eliseHtw/frontend_tools/blob/main/images_readme/tools_home.png)
+- (soll zukünftig für alle sichtbar sein)
+ 
+![Home](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_home.png) 
+![Home](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_home.png)
 
 ### Ausleihkiste
 - bietet eine Übersicht über alle Kisten
@@ -85,26 +90,33 @@ Diese Anwendung soll die Möglichkeit bieten, für kreative Aktionen Hilfsmittel
 - zeigt an, welche Kisten verfügbar sind
 - (soll zukünftig für eingeloggte Benutzer*innen mit Leserechten sichtbar sein)
 - ist nach Kategorie, Artikel und Details filterbar  
-![Ausleihkiste](https://github.com/eliseHtw/frontend_tools/blob/main/images_readme/tools_kiste.png)
+![Ausleihkiste](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_kiste.png)
+![Ausleihkiste](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_kiste.png)
+![Ausleihkiste](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_kiste-filter.png)
 
 ### Kiste bearbeiten
 - zeigt alle vorhandenen Kisten an  
-![Kiste bearbeiten](https://github.com/eliseHtw/frontend_tools/blob/main/images_readme/tools_edit.png)
+![Kiste bearbeiten](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_edit.png)
+![Kiste bearbeiten](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_edit.png)
 - es ist möglich einzelne Kisten ganz zu löschen über den Button `löschen`
 - es ist möglich neue Kisten hinzuzufügen über den Button `neue Kiste erstellen`  
-![neue Kiste erstellen](https://github.com/eliseHtw/frontend_tools/blob/main/images_readme/tools_create.png)
+![neue Kiste erstellen](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_create.png)
+![neue Kiste erstellen](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_create.png)
 - es ist möglich einzelne Kisten zu aktualisieren über den Button `aktualisieren`  
-![Kiste aktualisieren](https://github.com/eliseHtw/frontend_tools/blob/main/images_readme/tools_update.png)
+![Kiste aktualisieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_update.png)
+![Kiste aktualisieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_update.png)
 - (soll zukünftig nur für eingeloggte Benutzer*innen mit erweiterten Rechten sichtbar sein)  
 
 
 ### Login
 - hier entsteht eine Login-Seite
+![Einloggen](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_login.png)
 
 ### Registrieren
 - hier können sich neue Nutzer*innen registrieren
 - benötigt wird ein Benutzer*innenname, ein Passwort mit mindestens 12 Zeichen, eine E-Mail-Adresse und noch ist die Rolle für Leserechte vs. erweiterte Rechte frei wählbar  
-![Registrieren](https://github.com/eliseHtw/frontend_tools/blob/main/images_readme/tools_register.png)
+![Registrieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools2_register.png)
+![Registrieren](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/tools_register.png)
 
 ## Nächste Schritte
 - Das Projekt befindet sich weiterhin in der Entwicklungsphase und mögliche Ideen für Erweiterungen sind zusammengetragen.
@@ -120,7 +132,7 @@ Diese Anwendung soll die Möglichkeit bieten, für kreative Aktionen Hilfsmittel
 - Angular: 17.0.5 / 17.3.1 (andere Versionen nicht geprüft)
 
 ### Installation
-- Das Repository frontend_tools clonen, zu finden unter: [frontend_tools](https://github.com/eliseHtw/frontend_tools_barrierearm.git).
+- Das Repository frontend_tools clonen, zu finden unter: [frontend_tools_barrierearm](https://github.com/eliseHtw/frontend_tools_barrierearm.git).
 - Im eigenen Terminal in das Projektverzeichnis `frontend_tools_barrierearm` navigieren.
 - Für die Angular-Anwendung in das Verzeichnis `frontend_tools_start` navigieren.
 - Um die benötigten Abhängigkeiten zu installieren: `npm install` ausführen.
@@ -134,6 +146,6 @@ Diese Anwendung soll die Möglichkeit bieten, für kreative Aktionen Hilfsmittel
 ```
 - `ng build` ausführen
 - Frontend starten mit `ng serve`. Wenn das Backend erfolgreich gestartet wurde, sollte es dann so aussehen:  
-![frontend_started](https://github.com/eliseHtw/frontend_tools/blob/main/images_readme/frontend_started.png)
+![frontend_started](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/images_readme/frontend_started.png)
 - Die Website ist dann im Browser über `localhost:4200` erreichbar. Bei Änderungen der Dateien lädt die Seite automatisch neu.
-- Weitere Infos zu Angular in diesem Projekt unter: [frontend_tools_start](https://github.com/eliseHtw/frontend_tools/blob/main/frontend_tools_start/README.md).
+- Weitere Infos zu Angular in diesem Projekt unter: [frontend_tools_start](https://github.com/eliseHtw/frontend_tools_barrierearm/blob/main/frontend_tools_start/README.md).
